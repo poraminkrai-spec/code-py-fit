@@ -1,0 +1,26 @@
+# กำหนดตัวแปนก่อนไม่งั้นมันจะคิดยังไง
+apple = 10
+orange = 17
+coconut = 5
+
+# แสดงตัวเลือก ไม่เลือกมันจะไม่ทำงาน
+print("เลือกผลรวมของผลไม้")
+print(" apple, orange, coconut")
+
+# รับข้อมูลพิมเข้ามาตามรายชื่อผลไม้
+choices = input("พิมพ์ชื่อผลไม้: ")  
+
+# แยกชื่อเป็น list
+fruits = choices.replace(" ", "").split(",") 
+
+# คำนวณผลรวมนะครับน้องๆ
+sum_total = 0
+for fruit in fruits:
+    if fruit == "apple":
+        sum_total += apple
+    elif fruit == "orange":
+        sum_total += orange
+    elif fruit == "coconut":
+        sum_total += coconut
+
+print("ผลรวม =", sum_total)
